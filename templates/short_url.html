@@ -6,7 +6,23 @@
 
 {% block body %}
 <div class="container">
-<h1>Страница вашего короткого Url адреса: {{request.url_root}}{{short_url}}</h1>
+<table class="table table-bordered">
+    <thead class="table-primary">
+        <tr><th>full Url</th>
+        <th>short Url</th>
+        <th>date</th>
+    </tr></thead>
+    {% for el in article %}
+    <tbody><tr>
+        <td>{{ el.full_url }}</td>
+        <td><a href={{request.url_root}}{{ el.short_url }}>{{ el.short_url }}</a></td>
+        <td>{{ el.date }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 </div>
 
 {% endblock %}
+
+

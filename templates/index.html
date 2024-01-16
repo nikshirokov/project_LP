@@ -7,17 +7,18 @@
 {% block body %}
 <div class="container">
 <div class="px-4 py-5 my-5 text-center">
-
     <h1 class="display-5 fw-bold text-body-emphasis">Короче URL</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Сервис для быстрого преобразования длинной URL ссылки в более короткую </p>
         <form method="POST" action="{{ url_for('index') }}">
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <input type="text" name="long_url" placeholder="Введите Url-ссылку">
-            <button type="submit" class="btn btn-outline-secondary btn-lg px-4">Короче</button>
+            <div class="row mb-3 text-center">
+                    <input type="text" class="col-md-8 themed-grid-col" name="full_url" id="full_url" placeholder="Введите Url-ссылку">
+                <div class="col-md-4 themed-grid-col">
+                    <button type="submit" class="btn btn-outline-secondary btn-lg px-4">Короче</button>
+                </div>
+            </div>
         </form>
-      </div>
     </div>
-  </div>
+</div>
 </div>
 {% endblock %}
