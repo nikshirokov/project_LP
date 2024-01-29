@@ -10,16 +10,17 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <div class="container">
+<div class="container">
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
         <li class="nav-item"><a href="/short_url" class="nav-link">Ваши Url</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link"> Вход/Регистрация</a></li>
+        <li class="nav-item"><a href="/login" class="nav-link">Вход</a></li>
+        <li class="nav-item"><a href="/register" class="nav-link">Регистрация</a></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">Выход</a></li>
       </ul>
     </header>
-  </div>
+</div>
     {% block body %}{% endblock %}
     <div class="container">
   <footer class="py-3 my-4">

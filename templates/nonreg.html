@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Ваш Url
+{% endblock %}
+
+{% block body %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="alert alert-warning" role="alert">
+        {% for message in messages %}
+            {{ message }}<br>
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endwith %}
+<div class="container">
+<table class="table table-bordered">
+    <thead class="table-primary">
+        <tr><th>full Url</th>
+        <th>short Url</th>
+    </tr></thead>
+    <tbody><tr>
+        <td>{{ full_url }}</td>
+        <td><a href={{request.url_root}}{{ short_url }}>{{ short_url }}</a></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+{% endblock %}
+
+
